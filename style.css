@@ -26,6 +26,14 @@ li a{
     font-size: 20px;
     font-weight: 500;
 }
+.toggle-button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 1em;
+    display: block; /* Ensure it’s visible in the sidebar */
+}
 
 .hidden {
     display: none;
@@ -43,6 +51,22 @@ li a{
         align-items: center;
         justify-content: center;
         transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transitions */
+        transition: transform 0.3s ease; /* Smooth transition for collapsing */
+        transform: translateX(0); /* Start position */
+    }
+    .left-sidebar-nav.collapsed {
+        transform: translateX(-100%); /* Move off-screen */
+    }
+    .toggle-button {
+        background-color: lightcoral; /* Button background color */
+        border: none; /* No border */
+        font-size: 20px; /* Font size */
+        cursor: pointer; /* Pointer cursor */
+        margin-bottom: 1em; /* Space below button */
+        padding: 0.5em 1em; /* Padding */
+        border-radius: 5px; /* Rounded corners */
+        color: white; /* Text color */
+        display: block; /* Make it a block element */
     }
     .user-profile {
         border: 2px black solid;

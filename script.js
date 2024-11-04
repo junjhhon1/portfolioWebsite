@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".nav-link");
     const sidebarNav = document.querySelector(".left-sidebar-nav");
+    const toggleButton = document.querySelector(".toggle-button");
 
     // Hide all sections initially
     sections.forEach(section => {
@@ -19,17 +20,13 @@ document.addEventListener("DOMContentLoaded", function() {
             });
             document.getElementById(targetId).classList.remove("hidden"); // Show the clicked section
             
-            // Hide the sidebar navigation
-            sidebarNav.classList.add("hidden"); // Hide the sidebar
+            // Optionally collapse the sidebar navigation
+            sidebarNav.classList.add("collapsed"); // Collapse the sidebar
         });
     });
 
-    // Show sidebar on hover
-    sidebarNav.addEventListener("mouseenter", function() {
-        this.classList.remove("hidden"); // Show sidebar on hover
-    });
-
-    sidebarNav.addEventListener("mouseleave", function() {
-        this.classList.add("hidden"); // Hide sidebar when mouse leaves
+    // Toggle sidebar visibility
+    toggleButton.addEventListener("click", function() {
+        sidebarNav.classList.toggle("collapsed");
     });
 });
