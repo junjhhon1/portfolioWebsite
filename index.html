@@ -9,18 +9,38 @@
 <body>
     <div class="left-sidebar-nav">
         <div class="user-profile">
-            <img src="" alt="">
+            <img src="./img/icon img/chicken.png" alt="User Profile">
         </div>
-        <nav>
-            <ul>
-                <li><a href="">About Me</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Contact</a></li>
+        <nav aria-label="Main navigation">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#about" class="nav-link">About Me</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </div>
     <div class="main-body">
+        <section id="about" class="hidden">
+            <h2>About Me</h2>
+            <p>Write a brief introduction about yourself here. This can include your background, interests, and what you do.</p>
+        </section>
 
+        <section id="projects" class="hidden">
+            <h2>Projects</h2>
+            <p>Detail your projects here. You can list them out or provide links to live demos or repositories.</p>
+            <ul>
+                <li>Project 1: <a href="#">Link to Project 1</a></li>
+                <li>Project 2: <a href="#">Link to Project 2</a></li>
+                <li>Project 3: <a href="#">Link to Project 3</a></li>
+            </ul>
+        </section>
+
+        <section id="contact" class="hidden">
+            <h2>Contact</h2>
+            <p>You can include a contact form, email address, or social media links here.</p>
+            <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+        </section>
     </div>
+    <script src="./script.js"></script>
 </body>
 </html>

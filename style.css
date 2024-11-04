@@ -1,80 +1,118 @@
-/* Reset and basic styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reem+Kufi:wght@400;500;600;700&display=swap');
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins';
 }
-
 body {
     display: flex;
-    flex-direction: row;
-    font-family: Arial, sans-serif;
 }
-
-/* Sidebar styles */
 .left-sidebar-nav {
-    width: 25%;
+    background-color: lightcoral;
+    width: 30%;
     height: 100vh;
-    position: fixed;
-    z-index: 1;
-    overflow: hidden;
-    background-color: lightblue;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
-
-.left-sidebar-nav .user-profile img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    background-color: black;
-}
-
-.left-sidebar-nav nav ul {
+ul {
     list-style: none;
 }
-
-.left-sidebar-nav nav ul li {
-    margin-bottom: 15px;
-}
-
-.left-sidebar-nav nav ul li a {
+li a{
     text-decoration: none;
-    color: #333;
-    font-size: 1.2em;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
 }
 
-/* Main content styles */
-.main-body {
-    margin-left: 25%;
-    padding: 20px;
-    width: 75%;
-    background-color: #f0f0f0;
-    min-height: 100vh;
+.hidden {
+    display: none;
 }
 
-/* Responsive Design: Tablets */
-@media (max-width: 768px) {
+/* Extra small devices (phones, portrait mode): 30em up to but not including 36em */
+@media (min-width: 30em) and (max-width: 35.999em) {
+    /* Styles for extra small devices */
     .left-sidebar-nav {
-        width: 35%;
+        background-color: lightcoral;
+        width: 30%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transitions */
     }
-    
-    .main-body {
-        margin-left: 35%;
-        width: 65%;
+    .user-profile {
+        border: 2px black solid;
+        height: 4em;
+        width: 4.2em;
+        overflow: hidden;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        margin-bottom: 1em;
     }
-}
-
-/* Responsive Design: Phones */
-@media (max-width: 480px) {
-    .left-sidebar-nav {
-        width: 100%;
+    .user-profile img {
+        width: 60%;
         height: auto;
-        position: relative;
+        object-fit: cover;
+        display: block;
     }
-
+    .nav-list {
+        border: 2px black solid;
+        border-radius: 10px;
+        list-style: none;
+    }
+    .nav-item {
+        margin: 0.1em;
+        padding: 1rem 0.5em;
+        border-radius: 35px;
+    }
+    .nav-item a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        transition: background-color 0.3s;
+        font-size: 18px;
+        font-weight: 500;
+    }
     .main-body {
-        margin: 0;
-        padding-top: 20px;
+        display: hidden;
+        width: 70%;
     }
+    section {
+        /* Specific styles for small devices, if needed */
+        display: flex; /* Or block depending on layout */
+        flex-direction: column; /* Stack items vertically */
+    }
+}
+
+/* Small devices (phones, landscape mode): 36em up to but not including 48em */
+@media (min-width: 36em) and (max-width: 47.999em) {
+    /* Styles for small devices */
+    
+}
+
+/* Medium devices (tablets): 48em up to but not including 62em */
+@media (min-width: 48em) and (max-width: 61.999em) {
+    /* Styles for medium devices */
+}
+
+/* Large devices (small laptops and desktops): 62em up to but not including 75em */
+@media (min-width: 62em) and (max-width: 74.999em) {
+    /* Styles for large devices */
+}
+
+/* Extra large devices (large desktops and monitors): 75em up to but not including 87.5em */
+@media (min-width: 75em) and (max-width: 87.499em) {
+    /* Styles for extra large devices */
+}
+
+/* Ultra large devices (very large monitors): 87.5em and up */
+@media (min-width: 87.5em) {
+    /* Styles for ultra large devices */
 }
